@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vijay Kumar Chagantipati — AI Engineer &amp; Founder</title>
+<meta name="description" content="AI Engineer and CTO &amp; Founder of Logivus IT Solutions. I build LLM applications, RAG systems, AI agents and scalable SaaS platforms. Open to partnerships and client projects.">
+<meta property="og:title" content="Vijay Kumar Chagantipati — AI Engineer &amp; Founder">
+<meta property="og:description" content="LLM applications, RAG, AI agents and cloud-native SaaS — from prototype to production. Open to partnerships.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0081A7">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230081A7'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='800' font-size='26' text-anchor='middle' fill='%23FDFCDC'%3EVK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0;background:#FDFCDC}
+html{scroll-behavior:smooth}
+a{color:#006B8C;text-decoration:none}a:hover{color:#04516A;text-decoration:underline}
+*{box-sizing:border-box}
+
+/* reusable bits */
+.lbl{margin:0 0 10px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#006B8C;display:inline-flex;align-items:center;gap:10px}
+.lbl::before{content:"";width:28px;height:3px;border-radius:3px;background:#F07167}
+.h2{font-weight:800;font-size:clamp(1.75rem,3.4vw,2.6rem);letter-spacing:-.02em;line-height:1.15;margin:0 0 14px;color:#102A33}
+.card{background:#FFFFFF;border:1px solid #EFE9C9;border-radius:18px;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s,border-color .35s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px -18px rgba(0,81,106,.35);border-color:#F07167}
+.tag{font-size:12px;font-weight:600;padding:5px 11px;border-radius:999px;background:#D6F1F2;color:#0D3C4A}
+.chip{font-size:13px;font-weight:600;padding:7px 13px;border-radius:10px;background:#D6F1F2;color:#0D3C4A;transition:transform .25s,background .25s}
+.chip:hover{transform:translateY(-2px);background:#FED9B7}
+.chip-hot{background:#FED9B7}
+.chip-hot:hover{background:#F07167;color:#102A33}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:50px;padding:13px 24px;border-radius:12px;font-weight:700;font-size:16px;transition:transform .25s,box-shadow .25s,background .25s}
+.btn:hover{text-decoration:none;transform:translateY(-3px)}
+.btn-coral{background:#F07167;color:#102A33}
+.btn-coral:hover{color:#102A33;box-shadow:0 12px 26px -10px rgba(240,113,103,.8)}
+.btn-ghost{background:transparent;color:#102A33;border:2px solid #102A33}
+.btn-ghost:hover{color:#FDFCDC;background:#102A33}
+.btn .arr{transition:transform .25s}
+.btn:hover .arr{transform:translateX(4px)}
+.ic{width:52px;height:52px;border-radius:14px;background:#D6F1F2;display:flex;align-items:center;justify-content:center;transition:background .3s,transform .4s}
+.card:hover .ic{background:#FED9B7;transform:rotate(-8deg) scale(1.06)}
+.clink{display:flex;flex-direction:column;padding:16px 18px;border:1px solid rgba(253,252,220,.22);border-radius:14px;color:#FDFCDC;min-width:0;transition:background .25s,border-color .25s,transform .25s}
+.clink:hover{background:rgba(253,252,220,.08);border-color:#FED9B7;color:#FDFCDC;text-decoration:none;transform:translateX(4px)}
+.clink small{font-size:11px;font-weight:700;letter-spacing:.14em;color:#FED9B7}
+.nl{color:#3D5560;font-weight:600;position:relative}
+.nl::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:#F07167;transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nl:hover{color:#102A33;text-decoration:none}
+.nl:hover::after{transform:scaleX(1)}
+@media (max-width:720px){.nl{display:none}}
+
+/* ticker of roles */
+.tick{display:inline-block;height:1.25em;overflow:hidden;vertical-align:bottom}
+.tick span{display:block;height:1.25em}
+
+/* marquee */
+.mq{display:flex;width:max-content}
+
+/* ---- motion (on when the Animations tweak is on) ---- */
+@keyframes up{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes float1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(18px,-22px) scale(1.06)}}
+@keyframes float2{0%,100%{transform:translate(0,0) rotate(0)}50%{transform:translate(-20px,16px) rotate(12deg)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(0,175,185,.55)}70%{box-shadow:0 0 0 10px rgba(0,175,185,0)}100%{box-shadow:0 0 0 0 rgba(0,175,185,0)}}
+@keyframes tick{0%,20%{transform:translateY(0)}25%,45%{transform:translateY(-1.25em)}50%,70%{transform:translateY(-2.5em)}75%,95%{transform:translateY(-3.75em)}100%{transform:translateY(-5em)}}
+@keyframes marq{to{transform:translateX(-50%)}}
+@keyframes wave{0%,100%{transform:rotate(0)}20%{transform:rotate(14deg)}40%{transform:rotate(-8deg)}60%{transform:rotate(10deg)}}
+@keyframes rv{from{opacity:0;transform:translateY(46px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes bar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+.motion-on .hu{animation:up .9s cubic-bezier(.2,.7,.2,1) both}
+.motion-on .d1{animation-delay:.08s}.motion-on .d2{animation-delay:.2s}.motion-on .d3{animation-delay:.34s}.motion-on .d4{animation-delay:.5s}.motion-on .d5{animation-delay:.66s}
+.motion-on .b1{animation:float1 9s ease-in-out infinite}
+.motion-on .b2{animation:float2 11s ease-in-out infinite}
+.motion-on .b3{animation:float1 13s ease-in-out infinite reverse}
+.motion-on .ring{animation:spin 14s linear infinite}
+.motion-on .dot{animation:pulse 2s infinite}
+.motion-on .tick span{animation:tick 10s cubic-bezier(.7,0,.2,1) infinite}
+.motion-on .mq{animation:marq 38s linear infinite}
+.motion-on .mqw:hover .mq{animation-play-state:paused}
+.motion-on .wave{display:inline-block;transform-origin:70% 80%;animation:wave 2.4s ease-in-out 1.2s 2}
+@supports (animation-timeline: view()){
+.motion-on .rv{animation:rv linear both;animation-timeline:view();animation-range:entry 0% entry 45%}
+.motion-on .lbl::before{animation:bar linear both;animation-timeline:view();animation-range:entry 10% entry 60%;transform-origin:left}
+}
+@media (prefers-reduced-motion:reduce){.motion-on *,.motion-on *::before{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="motion-on" style="font-family: Montserrat, system-ui, sans-serif; color: #102A33; background: #FDFCDC; line-height: 1.65; font-size: 16px; min-width: 0; overflow-x: clip">
+
+<!-- NAV -->
+<header style="position: sticky; top: 0; z-index: 20; background: rgba(253,252,220,0.9); border-bottom: 1px solid #EFE9C9; backdrop-filter: blur(10px)">
+<nav aria-label="Main" style="max-width: 1160px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<a href="#top" style="display: inline-flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; color: #102A33; text-decoration: none; letter-spacing: -0.01em"><span aria-hidden="true" style="width: 36px; height: 36px; border-radius: 10px; background: #0081A7; color: #FDFCDC; display: inline-flex; align-items: center; justify-content: center; font-size: 14px">VK</span>Vijay Kumar<span style="color: #F07167; margin-left: -8px">.</span></a>
+<div style="display: flex; align-items: center; gap: 26px; font-size: 14px">
+<a class="nl" href="#services">Services</a>
+<a class="nl" href="#projects">Projects</a>
+<a class="nl" href="#experience">Experience</a>
+<a class="nl" href="#skills">Skills</a>
+<a class="btn btn-coral" href="#contact" style="min-height: 44px; padding: 10px 18px; font-size: 14px">Let's talk</a>
+</div>
+</nav>
+</header>
+
+<!-- HERO -->
+<section id="top" style="position: relative; overflow: hidden">
+<div aria-hidden="true" class="b1" style="position: absolute; width: 420px; height: 420px; border-radius: 50%; background: #FED9B7; top: -140px; right: -120px; opacity: 0.75"></div>
+<div aria-hidden="true" class="b2" style="position: absolute; width: 160px; height: 160px; border-radius: 40px; background: #00AFB9; bottom: 60px; left: -60px; opacity: 0.22"></div>
+<div aria-hidden="true" class="b3" style="position: absolute; width: 90px; height: 90px; border-radius: 50%; background: #F07167; top: 46%; right: 42%; opacity: 0.18"></div>
+
+<div style="position: relative; max-width: 1160px; margin: 0 auto; padding: clamp(56px, 9vw, 104px) 20px clamp(56px, 8vw, 88px); display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<div style="flex: 999 1 540px; min-width: 0">
+<p class="hu d1" style="display: inline-flex; align-items: center; gap: 10px; margin: 0 0 24px; padding: 7px 14px; background: #FFFFFF; border: 1px solid #BFE9EB; color: #0D3C4A; border-radius: 999px; font-size: 13px; font-weight: 600">
+<span class="dot" aria-hidden="true" style="width: 9px; height: 9px; border-radius: 50%; background: #00AFB9; display: inline-block"></span>
+Open to partnerships, client projects &amp; collaborations
+</p>
+<p class="hu d1" style="margin: 0 0 6px; font-size: 18px; font-weight: 600; color: #3D5560">Hi, I'm Vijay <span class="wave" aria-hidden="true">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F07167" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -4px"><path d="M8 13V5.5a1.5 1.5 0 0 1 3 0V12"></path><path d="M11 11.5v-7a1.5 1.5 0 0 1 3 0V12"></path><path d="M14 10.5a1.5 1.5 0 0 1 3 0V13"></path><path d="M17 11.5a1.5 1.5 0 0 1 3 0V16a6 6 0 0 1-6 6h-2a6 6 0 0 1-5-2.7L4.3 15a1.6 1.6 0 0 1 2.6-1.8L8 14.5"></path></svg></span></p>
+<h1 class="hu d2" style="font-size: clamp(2.3rem, 5.6vw, 4rem); line-height: 1.08; letter-spacing: -0.03em; margin: 0 0 14px; font-weight: 800">I build AI products businesses <span style="background: linear-gradient(transparent 62%, #FED9B7 62%)">run on.</span></h1>
+<p class="hu d3" style="margin: 0 0 22px; font-size: clamp(1.25rem, 2.6vw, 1.7rem); font-weight: 800; color: #0081A7; line-height: 1.25">
+<span style="color: #102A33">Specialising in </span><span class="tick"><span>AI Agents</span><span>RAG Systems</span><span>SaaS Platforms</span><span>Cloud Backends</span><span>AI Agents</span></span>
+</p>
+<p class="hu d4" style="font-size: 17px; color: #3D5560; margin: 0 0 32px; max-width: 620px">AI Engineer, Lead Software Developer and CTO &amp; Founder of Logivus IT Solutions. I design and ship LLM applications, multi-agent systems and cloud-native SaaS — from first prototype to production across the UK, USA, Saudi Arabia and India.</p>
+<div class="hu d5" style="display: flex; flex-wrap: wrap; gap: 12px">
+<a class="btn btn-coral" href="mailto:vijaykumarchagantipati2002@gmail.com">Start a project <span class="arr" aria-hidden="true">→</span></a>
+<a class="btn btn-ghost" href="#projects">See my work</a>
+</div>
+</div>
+
+<div class="hu d4" style="flex: 1 1 320px; min-width: 0; max-width: 460px; margin: 0 auto">
+<div class="card" style="padding: 28px; border-radius: 22px; box-shadow: 0 30px 60px -30px rgba(0,81,106,.35)">
+<div style="display: flex; align-items: center; gap: 18px; margin-bottom: 24px">
+<div style="position: relative; width: 72px; height: 72px; flex: 0 0 72px">
+<svg class="ring" aria-hidden="true" width="72" height="72" viewBox="0 0 72 72" style="position: absolute; inset: 0"><circle cx="36" cy="36" r="34" fill="none" stroke="#F07167" stroke-width="2.5" stroke-dasharray="6 7" stroke-linecap="round"></circle></svg>
+<div aria-hidden="true" style="position: absolute; inset: 8px; border-radius: 50%; background: #0081A7; color: #FDFCDC; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px">VK</div>
+</div>
+<div style="min-width: 0">
+<p style="margin: 0; font-weight: 700; line-height: 1.3">Vijay Kumar Chagantipati</p>
+<p style="margin: 2px 0 0; font-size: 14px; color: #3D5560">AI Engineer · Hyderabad, India</p>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<div style="background: #FDFCDC; border-radius: 14px; padding: 14px">
+<p style="margin: 0; font-size: 26px; font-weight: 800; color: #0081A7; line-height: 1.2">3</p>
+<p style="margin: 0; font-size: 12.5px; color: #3D5560; line-height: 1.4">International markets — UK, USA, KSA</p>
+</div>
+<div style="background: #FED9B7; border-radius: 14px; padding: 14px">
+<p style="margin: 0; font-size: 26px; font-weight: 800; color: #102A33; line-height: 1.2">15+</p>
+<p style="margin: 0; font-size: 12.5px; color: #3D2A20; line-height: 1.4">Products &amp; platforms built</p>
+</div>
+<div style="background: #FED9B7; border-radius: 14px; padding: 14px">
+<p style="margin: 0; font-size: 26px; font-weight: 800; color: #102A33; line-height: 1.2">#1850</p>
+<p style="margin: 0; font-size: 12.5px; color: #3D2A20; line-height: 1.4">Smart Coder global rank</p>
+</div>
+<div style="background: #FDFCDC; border-radius: 14px; padding: 14px">
+<p style="margin: 0; font-size: 26px; font-weight: 800; color: #0081A7; line-height: 1.2">IIIT-H</p>
+<p style="margin: 0; font-size: 12.5px; color: #3D5560; line-height: 1.4">ML research background</p>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: 20px; font-size: 14px; font-weight: 600">
+<a href="https://linkedin.com/in/vjaykumarchagantipati2002">LinkedIn</a>
+<span aria-hidden="true" style="color: #F07167">•</span>
+<a href="https://github.com/VIJAYKUMARCHAGANTIPATI2002">GitHub</a>
+<span aria-hidden="true" style="color: #F07167">•</span>
+<a href="tel:+919581353239">+91 95813 53239</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- MARQUEE -->
+<div class="mqw" aria-label="Core technologies" style="background: #102A33; color: #FDFCDC; overflow: hidden; padding: 18px 0; border-top: 4px solid #00AFB9">
+<div class="mq" style="font-weight: 700; font-size: 15px; letter-spacing: 0.02em; white-space: nowrap">
+<div style="display: flex; gap: 32px; padding-right: 32px; align-items: center">
+<span>LLM Applications</span><span aria-hidden="true" style="color: #F07167">✦</span><span>RAG</span><span aria-hidden="true" style="color: #00AFB9">✦</span><span>AI Agents</span><span aria-hidden="true" style="color: #FED9B7">✦</span><span>MCP</span><span aria-hidden="true" style="color: #F07167">✦</span><span>Python</span><span aria-hidden="true" style="color: #00AFB9">✦</span><span>Go</span><span aria-hidden="true" style="color: #FED9B7">✦</span><span>Node.js</span><span aria-hidden="true" style="color: #F07167">✦</span><span>AWS</span><span aria-hidden="true" style="color: #00AFB9">✦</span><span>Docker</span><span aria-hidden="true" style="color: #FED9B7">✦</span><span>Qdrant</span><span aria-hidden="true" style="color: #F07167">✦</span><span>React</span><span aria-hidden="true" style="color: #00AFB9">✦</span><span>Flutter</span><span aria-hidden="true" style="color: #FED9B7">✦</span>
+</div>
+<div aria-hidden="true" style="display: flex; gap: 32px; padding-right: 32px; align-items: center">
+<span>LLM Applications</span><span style="color: #F07167">✦</span><span>RAG</span><span style="color: #00AFB9">✦</span><span>AI Agents</span><span style="color: #FED9B7">✦</span><span>MCP</span><span style="color: #F07167">✦</span><span>Python</span><span style="color: #00AFB9">✦</span><span>Go</span><span style="color: #FED9B7">✦</span><span>Node.js</span><span style="color: #F07167">✦</span><span>AWS</span><span style="color: #00AFB9">✦</span><span>Docker</span><span style="color: #FED9B7">✦</span><span>Qdrant</span><span style="color: #F07167">✦</span><span>React</span><span style="color: #00AFB9">✦</span><span>Flutter</span><span style="color: #FED9B7">✦</span>
+</div>
+</div>
+</div>
+
+<!-- SERVICES -->
+<section id="services" style="max-width: 1160px; margin: 0 auto; padding: clamp(64px, 9vw, 104px) 20px">
+<p class="lbl">What I build for you</p>
+<h2 class="h2">Services for founders, businesses &amp; partners</h2>
+<p style="margin: 0 0 40px; color: #3D5560; max-width: 640px">From an idea on a whiteboard to a secure, scalable product in production — I cover AI, backend, cloud and the apps your users touch.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 18px">
+<div class="card rv" style="padding: 26px">
+<div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#006B8C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="7" width="16" height="12" rx="3"></rect><path d="M12 7V4M9 12h.01M15 12h.01M9 16h6"></path></svg></div>
+<h3 style="margin: 18px 0 6px; font-size: 18px; font-weight: 700">AI Agents &amp; Automation</h3>
+<p style="margin: 0; color: #3D5560; font-size: 15px">Multi-agent systems, tool calling and MCP integrations that automate sales, marketing, support and operations end to end.</p>
+</div>
+<div class="card rv" style="padding: 26px">
+<div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#006B8C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h11a3 3 0 0 1 3 3v11H7a3 3 0 0 1-3-3z"></path><path d="M8 9h6M8 13h6"></path><circle cx="18.5" cy="18.5" r="2.5"></circle></svg></div>
+<h3 style="margin: 18px 0 6px; font-size: 18px; font-weight: 700">RAG &amp; AI Assistants</h3>
+<p style="margin: 0; color: #3D5560; font-size: 15px">Chatbots and copilots grounded in your own documents and data — vector search, reranking and evaluation keep answers accurate.</p>
+</div>
+<div class="card rv" style="padding: 26px">
+<div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#006B8C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M3 9h18M8 21h8M12 18v3"></path></svg></div>
+<h3 style="margin: 18px 0 6px; font-size: 18px; font-weight: 700">SaaS Product Development</h3>
+<p style="margin: 0; color: #3D5560; font-size: 15px">MVPs to full platforms — multi-tenant architecture, subscriptions, OAuth integrations, admin portals and analytics dashboards.</p>
+</div>
+<div class="card rv" style="padding: 26px">
+<div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#006B8C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="6" rx="1.5"></rect><rect x="3" y="15" width="18" height="6" rx="1.5"></rect><path d="M7 6h.01M7 18h.01M12 9v6"></path></svg></div>
+<h3 style="margin: 18px 0 6px; font-size: 18px; font-weight: 700">Backend &amp; Cloud Architecture</h3>
+<p style="margin: 0; color: #3D5560; font-size: 15px">Microservices in Node.js, Go and Python on AWS — Dockerized, observable with Prometheus, Grafana and Loki, built to scale.</p>
+</div>
+<div class="card rv" style="padding: 26px">
+<div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#006B8C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18"></path><path d="M6 16v-5M11 16V7M16 16v-8M21 16V5"></path></svg></div>
+<h3 style="margin: 18px 0 6px; font-size: 18px; font-weight: 700">Data, ML &amp; Analytics</h3>
+<p style="margin: 0; color: #3D5560; font-size: 15px">Data pipelines, predictive models, OCR and document AI, and clinical-grade analytics like healthcare PROMs outcome tracking.</p>
+</div>
+<div class="card rv" style="padding: 26px">
+<div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#006B8C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"></rect><path d="M11 18h2"></path></svg></div>
+<h3 style="margin: 18px 0 6px; font-size: 18px; font-weight: 700">Web &amp; Mobile Apps</h3>
+<p style="margin: 0; color: #3D5560; font-size: 15px">React and Next.js web apps, plus cross-platform iOS and Android apps in Flutter and React Native, wired to your AI backend.</p>
+</div>
+</div>
+
+<h3 style="font-size: 22px; font-weight: 800; margin: 64px 0 18px">Ways to work together</h3>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 18px">
+<div class="card rv" style="padding: 26px; background: #FED9B7; border-color: #FED9B7">
+<p style="margin: 0 0 10px; font-size: 40px; font-weight: 800; color: #F07167; line-height: 1">01</p>
+<h4 style="margin: 0 0 6px; font-size: 18px; font-weight: 700">Build your product</h4>
+<p style="margin: 0; color: #3D2A20; font-size: 15px">Fixed-scope delivery of an MVP, AI feature or platform — clear milestones, clean code and a proper handover.</p>
+</div>
+<div class="card rv" style="padding: 26px; background: #00AFB9; border-color: #00AFB9">
+<p style="margin: 0 0 10px; font-size: 40px; font-weight: 800; color: #FDFCDC; line-height: 1">02</p>
+<h4 style="margin: 0 0 6px; font-size: 18px; font-weight: 700; color: #102A33">Technical partner</h4>
+<p style="margin: 0; color: #0B2A33; font-size: 15px">Long-term collaboration as your technical co-founder or fractional CTO — architecture, roadmap and execution.</p>
+</div>
+<div class="card rv" style="padding: 26px; background: #102A33; border-color: #102A33; color: #FDFCDC">
+<p style="margin: 0 0 10px; font-size: 40px; font-weight: 800; color: #F07167; line-height: 1">03</p>
+<h4 style="margin: 0 0 6px; font-size: 18px; font-weight: 700">Team via Logivus IT Solutions</h4>
+<p style="margin: 0; color: #D7E6E8; font-size: 15px">Need more hands? My company Logivus IT Solutions scales delivery for larger and ongoing engagements.</p>
+</div>
+</div>
+</section>
+
+<!-- VENTURES -->
+<section style="background: #FFFFFF; border-top: 1px solid #EFE9C9; border-bottom: 1px solid #EFE9C9">
+<div style="max-width: 1160px; margin: 0 auto; padding: clamp(64px, 9vw, 96px) 20px">
+<p class="lbl">Ventures</p>
+<h2 class="h2" style="margin-bottom: 36px">Companies &amp; products I'm building</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 18px">
+<div class="card rv" style="padding: 30px; background: #0081A7; border-color: #0081A7; color: #FFFFFF">
+<p style="margin: 0 0 6px; font-size: 13px; font-weight: 700; color: #FED9B7; letter-spacing: 0.06em">CTO &amp; FOUNDER</p>
+<h3 style="margin: 0 0 12px; font-size: 26px; font-weight: 800">Logivus IT Solutions</h3>
+<p style="margin: 0; color: #FFFFFF; font-size: 16px; font-weight: 500">Software company building AI-first products and custom software for clients — LLM apps, SaaS platforms, web and mobile.</p>
+</div>
+<div class="card rv" style="padding: 30px">
+<p style="margin: 0 0 6px; font-size: 13px; font-weight: 700; color: #006B8C; letter-spacing: 0.06em">FOUNDER · 2025 – PRESENT</p>
+<h3 style="margin: 0 0 12px; font-size: 26px; font-weight: 800">LeadzPro</h3>
+<p style="margin: 0 0 16px; color: #3D5560; font-size: 15px">AI-powered lead generation and social media marketing automation for India's service and production businesses — one click, every platform, maximum leads.</p>
+<a href="https://leadzpro.in" style="font-weight: 700">leadzpro.in →</a>
+</div>
+<div class="card rv" style="padding: 30px">
+<p style="margin: 0 0 6px; font-size: 13px; font-weight: 700; color: #006B8C; letter-spacing: 0.06em">PRODUCT · LIVE</p>
+<h3 style="margin: 0 0 12px; font-size: 26px; font-weight: 800">KwikSocio</h3>
+<p style="margin: 0 0 16px; color: #3D5560; font-size: 15px">AI social media and marketing platform with tiered plans for Indian businesses, from individuals to agencies. Built on Node.js, MongoDB and React.</p>
+<a href="https://kwiksocio.com" style="font-weight: 700">kwiksocio.com →</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" style="max-width: 1160px; margin: 0 auto; padding: clamp(64px, 9vw, 104px) 20px">
+<p class="lbl">Selected work</p>
+<h2 class="h2" style="margin-bottom: 36px">AI &amp; machine learning projects</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); gap: 18px">
+
+<article class="card rv" style="padding: 28px; display: flex; flex-direction: column; gap: 12px; border-top: 5px solid #F07167">
+<div style="display: flex; justify-content: space-between; gap: 6px 12px; flex-wrap: wrap; align-items: baseline"><h3 style="margin: 0; font-size: 20px; font-weight: 800">LeadzPro — AI Lead Generation</h3><span style="font-size: 13px; font-weight: 600; color: #006B8C">2025 – Present</span></div>
+<p style="margin: 0; color: #3D5560; font-size: 15px">B2B lead generation and marketing automation SaaS with an in-house AI engine — full control over data, prompts and model behaviour. LLM agents run per-tenant campaigns, triggered in real time by webhooks, on a containerized AWS backend with strict multi-tenant isolation.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 6px"><span class="tag">AI Agents</span><span class="tag">Python</span><span class="tag">Node.js</span><span class="tag">AWS</span><span class="tag">OAuth</span></div>
+</article>
+
+<article class="card rv" style="padding: 28px; display: flex; flex-direction: column; gap: 12px; border-top: 5px solid #00AFB9">
+<div style="display: flex; justify-content: space-between; gap: 6px 12px; flex-wrap: wrap; align-items: baseline"><h3 style="margin: 0; font-size: 20px; font-weight: 800">Edfortis — AI EdTech Platform</h3><span style="font-size: 13px; font-weight: 600; color: #006B8C">2025</span></div>
+<p style="margin: 0; color: #3D5560; font-size: 15px">AI platform for university admissions, student information systems and institutional analytics. A RAG-based academic advisor grounds answers in course-catalog and program data; AI automates transcript analysis and application intake.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 6px"><span class="tag">RAG</span><span class="tag">LLMs</span><span class="tag">React + TypeScript</span><span class="tag">MongoDB</span></div>
+</article>
+
+<article class="card rv" style="padding: 28px; display: flex; flex-direction: column; gap: 12px; border-top: 5px solid #0081A7">
+<div style="display: flex; justify-content: space-between; gap: 6px 12px; flex-wrap: wrap; align-items: baseline"><h3 style="margin: 0; font-size: 20px; font-weight: 800">AI Infrastructure Monitoring</h3><span style="font-size: 13px; font-weight: 600; color: #006B8C">Present</span></div>
+<p style="margin: 0; color: #3D5560; font-size: 15px">AI-driven monitoring and benchmarking for Oracle PeopleSoft web, app and database servers. A secure agent-to-agent architecture in Go collects telemetry across UAT, Test and Production; a React dashboard shows predictive performance trends.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 6px"><span class="tag">Go</span><span class="tag">Multi-Agent</span><span class="tag">React</span><span class="tag">Oracle PeopleSoft</span></div>
+</article>
+
+<article class="card rv" style="padding: 28px; display: flex; flex-direction: column; gap: 12px; border-top: 5px solid #FED9B7">
+<div style="display: flex; justify-content: space-between; gap: 6px 12px; flex-wrap: wrap; align-items: baseline"><h3 style="margin: 0; font-size: 20px; font-weight: 800">AI Healthcare Analytics — PROMs</h3><span style="font-size: 13px; font-weight: 600; color: #006B8C">Present</span></div>
+<p style="margin: 0; color: #3D5560; font-size: 15px">Analytics on longitudinal patient-reported outcome data for platforms in the UK, USA and Saudi Arabia — tracking recovery and treatment effectiveness through preprocessing, statistical and visualization pipelines that feed clinician dashboards.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 6px"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Node.js</span><span class="tag">Healthcare</span></div>
+</article>
+
+<article class="card rv" style="padding: 28px; display: flex; flex-direction: column; gap: 12px; border-top: 5px solid #F07167">
+<div style="display: flex; justify-content: space-between; gap: 6px 12px; flex-wrap: wrap; align-items: baseline"><h3 style="margin: 0; font-size: 20px; font-weight: 800">TerraWatch — Flood Risk Prediction</h3><span style="font-size: 13px; font-weight: 600; color: #006B8C">2024</span></div>
+<p style="margin: 0; color: #3D5560; font-size: 15px">ML flood-risk prediction on large-scale EM-DAT disaster data, built at Megathon, IIIT Hyderabad. Benchmarked Random Forest and Gradient Boosting ensembles with feature selection and error analysis, reaching 99%+ accuracy; delivered through a Flutter app.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 6px"><span class="tag">Scikit-learn</span><span class="tag">Ensembles</span><span class="tag">Flutter</span></div>
+</article>
+
+<article class="card rv" style="padding: 28px; display: flex; flex-direction: column; gap: 12px; border-top: 5px solid #00AFB9">
+<div style="display: flex; justify-content: space-between; gap: 6px 12px; flex-wrap: wrap; align-items: baseline"><h3 style="margin: 0; font-size: 20px; font-weight: 800">ReThink — AI Truth Discovery</h3><span style="font-size: 13px; font-weight: 600; color: #006B8C">2024</span></div>
+<p style="margin: 0; color: #3D5560; font-size: 15px">Turned IIIT Hyderabad truth-discovery research into a startup that resolves conflicting information sources. Reached the PALS finals at IIT Madras with strong validation and investor interest.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 6px"><span class="tag">Machine Learning</span><span class="tag">Research to Product</span></div>
+</article>
+
+<article class="card rv" style="padding: 28px; display: flex; flex-direction: column; gap: 12px; border-top: 5px solid #0081A7">
+<div style="display: flex; justify-content: space-between; gap: 6px 12px; flex-wrap: wrap; align-items: baseline"><h3 style="margin: 0; font-size: 20px; font-weight: 800">QSalon — Salon SaaS</h3><span style="font-size: 13px; font-weight: 600; color: #006B8C">2026</span></div>
+<p style="margin: 0; color: #3D5560; font-size: 15px">Real-time bookings, self check-in, notifications, loyalty rewards and iOS/web admin portals on an observable, Dockerized microservices backend.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 6px"><span class="tag">Microservices</span><span class="tag">Docker</span><span class="tag">Prometheus · Grafana · Loki</span></div>
+</article>
+
+<article class="card rv" style="padding: 28px; display: flex; flex-direction: column; gap: 12px; border-top: 5px solid #FED9B7">
+<div style="display: flex; justify-content: space-between; gap: 6px 12px; flex-wrap: wrap; align-items: baseline"><h3 style="margin: 0; font-size: 20px; font-weight: 800">Computer Vision OCR</h3><span style="font-size: 13px; font-weight: 600; color: #006B8C">2023</span></div>
+<p style="margin: 0; color: #3D5560; font-size: 15px">Pipeline that extracts structured text from images using OpenCV preprocessing, Tesseract and regex post-processing — improving accuracy and cutting manual data entry.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 6px"><span class="tag">OpenCV</span><span class="tag">Tesseract</span><span class="tag">Python</span></div>
+</article>
+</div>
+
+<h3 style="font-size: 22px; font-weight: 800; margin: 56px 0 18px">More products</h3>
+<div class="rv" style="background: #FFFFFF; border: 1px solid #EFE9C9; border-radius: 18px; overflow: hidden">
+<div style="display: flex; flex-wrap: wrap; gap: 4px 24px; padding: 18px 24px; border-bottom: 1px solid #F3EED3"><strong style="flex: 0 0 210px">BoutYou</strong><span style="flex: 1 1 300px; color: #3D5560; font-size: 15px">Creator–brand collaboration platform with auth and content feeds · Flutter, Firebase, React, Supabase · 2025</span></div>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 24px; padding: 18px 24px; border-bottom: 1px solid #F3EED3"><strong style="flex: 0 0 210px">Citizen Safety</strong><span style="flex: 1 1 300px; color: #3D5560; font-size: 15px">Help-request app with precise geolocation, live map monitoring and rewards · Flutter, Firebase, What3Words · 2024</span></div>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 24px; padding: 18px 24px; border-bottom: 1px solid #F3EED3"><strong style="flex: 0 0 210px">EASY Medical Record</strong><span style="flex: 1 1 300px; color: #3D5560; font-size: 15px">Extended OpenEMR with custom workflows for data handling and interoperability · PHP, Python, Node.js · 2024</span></div>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 24px; padding: 18px 24px; border-bottom: 1px solid #F3EED3"><strong style="flex: 0 0 210px">Grievance Guard</strong><span style="flex: 1 1 300px; color: #3D5560; font-size: 15px">Emergency-response portal for people in distress — won first prize · PHP, MySQL, JavaScript · 2023</span></div>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 24px; padding: 18px 24px"><strong style="flex: 0 0 210px">Partial FIR System</strong><span style="flex: 1 1 300px; color: #3D5560; font-size: 15px">Online partial-FIR filing by police station or district · PHP, JavaScript · 2023</span></div>
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" style="background: #FFFFFF; border-top: 1px solid #EFE9C9; border-bottom: 1px solid #EFE9C9">
+<div style="max-width: 1160px; margin: 0 auto; padding: clamp(64px, 9vw, 104px) 20px">
+<p class="lbl">Experience</p>
+<h2 class="h2" style="margin-bottom: 40px">Professional journey</h2>
+<div style="position: relative; padding-left: 28px; border-left: 3px solid #D6F1F2; display: flex; flex-direction: column; gap: 22px">
+
+<div class="rv" style="position: relative">
+<span aria-hidden="true" style="position: absolute; left: -38px; top: 6px; width: 17px; height: 17px; border-radius: 50%; background: #F07167; border: 4px solid #FFFFFF; box-shadow: 0 0 0 2px #F07167"></span>
+<div class="card" style="padding: 26px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline">
+<h3 style="margin: 0; font-size: 19px; font-weight: 800">Lead Software Developer (Backend &amp; AI Systems)</h3>
+<span style="font-size: 13px; font-weight: 700; color: #006B8C">APR 2025 — PRESENT</span>
+</div>
+<p style="margin: 2px 0 14px; font-weight: 600; color: #3D5560">GIFTY App Solutions · Hyderabad</p>
+<ul style="margin: 0; padding-left: 18px; color: #3D5560; font-size: 15px; display: flex; flex-direction: column; gap: 6px">
+<li>Lead AI-enabled backend services in Node.js and Go for international healthcare PROMs platforms across the UK, USA and Saudi Arabia.</li>
+<li>Built AI-driven analytics on longitudinal patient outcome data, surfacing recovery and treatment insights to clinicians.</li>
+<li>Engineered data pipelines and optimized MongoDB queries over large patient datasets while preserving integrity and performance.</li>
+<li>Deliver secure, multi-tenant, cloud-native systems with TDD, code reviews and automated DevOps alongside distributed Agile teams.</li>
+</ul>
+</div>
+</div>
+
+<div class="rv" style="position: relative">
+<span aria-hidden="true" style="position: absolute; left: -38px; top: 6px; width: 17px; height: 17px; border-radius: 50%; background: #00AFB9; border: 4px solid #FFFFFF; box-shadow: 0 0 0 2px #00AFB9"></span>
+<div class="card" style="padding: 26px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline">
+<h3 style="margin: 0; font-size: 19px; font-weight: 800">Software Developer (Intern)</h3>
+<span style="font-size: 13px; font-weight: 700; color: #006B8C">FEB 2024 — APR 2025</span>
+</div>
+<p style="margin: 2px 0 14px; font-weight: 600; color: #3D5560">GIFTY Solutions · Hyderabad</p>
+<ul style="margin: 0; padding-left: 18px; color: #3D5560; font-size: 15px; display: flex; flex-direction: column; gap: 6px">
+<li>Led full-stack development of a cloud-based healthcare PROMs platform deployed across multiple international markets.</li>
+<li>Built secure Node.js/MongoDB APIs for sensitive patient data with AI-based analytics — earning direct project approval from ICHOM.</li>
+</ul>
+</div>
+</div>
+
+<div class="rv" style="position: relative">
+<span aria-hidden="true" style="position: absolute; left: -38px; top: 6px; width: 17px; height: 17px; border-radius: 50%; background: #0081A7; border: 4px solid #FFFFFF; box-shadow: 0 0 0 2px #0081A7"></span>
+<div class="card" style="padding: 26px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline">
+<h3 style="margin: 0; font-size: 19px; font-weight: 800">Student Leader Intern</h3>
+<span style="font-size: 13px; font-weight: 700; color: #006B8C">SEP 2023 — MAY 2024</span>
+</div>
+<p style="margin: 2px 0 14px; font-weight: 600; color: #3D5560">PanIIT Alumni Leadership Series (PALS) · IIT Madras</p>
+<p style="margin: 0; color: #3D5560; font-size: 15px">Selected by the PALS Champions Team to drive innovation initiatives, software workshops and national-level hackathons; awarded an internship certificate for outstanding performance.</p>
+</div>
+</div>
+
+<div class="rv" style="position: relative">
+<span aria-hidden="true" style="position: absolute; left: -38px; top: 6px; width: 17px; height: 17px; border-radius: 50%; background: #FED9B7; border: 4px solid #FFFFFF; box-shadow: 0 0 0 2px #F0B98A"></span>
+<div class="card" style="padding: 26px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline">
+<h3 style="margin: 0; font-size: 19px; font-weight: 800">Software Engineering Intern</h3>
+<span style="font-size: 13px; font-weight: 700; color: #006B8C">NOV 2023 — FEB 2024</span>
+</div>
+<p style="margin: 2px 0 14px; font-weight: 600; color: #3D5560">ORBIT IT Solutions · Hyderabad</p>
+<p style="margin: 0; color: #3D5560; font-size: 15px">Engineered web applications and backend services in Python, Java and SQL for private-sector clients, and optimized relational queries for faster response times.</p>
+</div>
+</div>
+
+<div class="rv" style="position: relative">
+<span aria-hidden="true" style="position: absolute; left: -38px; top: 6px; width: 17px; height: 17px; border-radius: 50%; background: #F07167; border: 4px solid #FFFFFF; box-shadow: 0 0 0 2px #F07167"></span>
+<div class="card" style="padding: 26px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline">
+<h3 style="margin: 0; font-size: 19px; font-weight: 800">Research Intern — DSAC Lab</h3>
+<span style="font-size: 13px; font-weight: 700; color: #006B8C">MAY 2023 — JUL 2023</span>
+</div>
+<p style="margin: 2px 0 14px; font-weight: 600; color: #3D5560">IIIT Hyderabad · ML for Truth Discovery · Prof. Krishna Reddy</p>
+<p style="margin: 0; color: #3D5560; font-size: 15px">Designed and evaluated ML algorithms for source credibility estimation and consensus modeling; contributed to an ongoing paper on web-scale information reliability with PhD and Master's researchers.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" style="max-width: 1160px; margin: 0 auto; padding: clamp(64px, 9vw, 104px) 20px">
+<p class="lbl">Tech stack</p>
+<h2 class="h2" style="margin-bottom: 36px">Skills &amp; tools</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); gap: 18px">
+
+<div class="card rv" style="padding: 26px; grid-column: 1 / -1">
+<h3 style="margin: 0 0 16px; font-size: 18px; font-weight: 800">Generative AI &amp; LLMs</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 8px"><span class="chip chip-hot">LLM Application Development</span><span class="chip chip-hot">RAG</span><span class="chip chip-hot">AI Agents &amp; Multi-Agent Systems</span><span class="chip chip-hot">LangChain</span><span class="chip chip-hot">LangGraph</span><span class="chip chip-hot">LlamaIndex</span><span class="chip chip-hot">Model Context Protocol (MCP)</span><span class="chip chip-hot">Function / Tool Calling</span><span class="chip chip-hot">OpenAI · Claude · Gemini APIs</span><span class="chip chip-hot">Open-source LLMs (Llama, Mistral)</span><span class="chip chip-hot">Prompt Engineering</span><span class="chip chip-hot">Embeddings &amp; Semantic Search</span><span class="chip chip-hot">Hybrid Search &amp; Reranking</span><span class="chip chip-hot">LLM Evals &amp; Guardrails</span></div>
+</div>
+
+<div class="card rv" style="padding: 26px">
+<h3 style="margin: 0 0 16px; font-size: 18px; font-weight: 800">Machine Learning &amp; Data</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 8px"><span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">Scikit-learn</span><span class="chip">Hugging Face</span><span class="chip">Ensemble Methods</span><span class="chip">Feature Engineering</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">OpenCV</span><span class="chip">Tesseract OCR</span><span class="chip">Data Pipelines</span><span class="chip">Statistical Analysis</span></div>
+</div>
+
+<div class="card rv" style="padding: 26px">
+<h3 style="margin: 0 0 16px; font-size: 18px; font-weight: 800">Backend &amp; Systems</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 8px"><span class="chip">Python</span><span class="chip">Go</span><span class="chip">Node.js</span><span class="chip">TypeScript</span><span class="chip">Express.js</span><span class="chip">FastAPI</span><span class="chip">REST &amp; GraphQL</span><span class="chip">Microservices</span><span class="chip">Webhooks</span><span class="chip">OAuth</span><span class="chip">Multi-Tenant SaaS</span><span class="chip">Queues (Redis, BullMQ)</span><span class="chip">System Design</span><span class="chip">Java · C++ · PHP</span></div>
+</div>
+
+<div class="card rv" style="padding: 26px">
+<h3 style="margin: 0 0 16px; font-size: 18px; font-weight: 800">Databases &amp; Vector Stores</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 8px"><span class="chip">PostgreSQL</span><span class="chip">MongoDB</span><span class="chip">MySQL</span><span class="chip">Redis</span><span class="chip">Qdrant</span><span class="chip">pgvector</span><span class="chip">Supabase</span><span class="chip">Firebase</span><span class="chip">Query Optimization</span></div>
+</div>
+
+<div class="card rv" style="padding: 26px">
+<h3 style="margin: 0 0 16px; font-size: 18px; font-weight: 800">Cloud, DevOps &amp; Observability</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 8px"><span class="chip">AWS</span><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">CI/CD (GitHub Actions)</span><span class="chip">Nginx</span><span class="chip">Caddy</span><span class="chip">Cloudflare</span><span class="chip">Prometheus</span><span class="chip">Grafana</span><span class="chip">Loki</span><span class="chip">Linux / Ubuntu</span><span class="chip">Git &amp; GitHub</span></div>
+</div>
+
+<div class="card rv" style="padding: 26px">
+<h3 style="margin: 0 0 16px; font-size: 18px; font-weight: 800">Frontend, Mobile &amp; Practices</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 8px"><span class="chip">React</span><span class="chip">Next.js</span><span class="chip">Tailwind CSS</span><span class="chip">React Native</span><span class="chip">Flutter / Dart</span><span class="chip">TDD</span><span class="chip">Jest</span><span class="chip">Code Reviews</span><span class="chip">Agile / Scrum</span></div>
+</div>
+</div>
+</section>
+
+<!-- ACHIEVEMENTS + EDUCATION -->
+<section style="max-width: 1160px; margin: 0 auto; padding: 0 20px clamp(64px, 9vw, 104px); display: flex; flex-wrap: wrap; gap: 18px">
+<div class="card rv" style="flex: 1 1 460px; min-width: 0; padding: 30px">
+<p class="lbl">Recognition</p>
+<h2 style="font-size: 24px; font-weight: 800; margin: 0 0 18px">Achievements &amp; certifications</h2>
+<ul style="margin: 0; padding-left: 18px; color: #3D5560; font-size: 15px; display: flex; flex-direction: column; gap: 9px">
+<li><strong style="color: #102A33">Winner</strong>, "PALS ANALYZE" National Hackathon — PanIIT Alumni Leadership Series, IIT Madras</li>
+<li><strong style="color: #102A33">Best Student Innovation Award</strong>, CMR Engineering College (2024) — for AI-driven applications and startup innovation</li>
+<li><strong style="color: #102A33">Smart Coder Global Rank 1850</strong> across LeetCode, Codeforces and CodeChef</li>
+<li><strong style="color: #102A33">First prize</strong> — Grievance Guard emergency-response portal</li>
+<li>Megathon, IIIT Hyderabad (2024) — cleared multiple phases with ML risk-prediction models</li>
+<li>AWS Academy Graduate — Cloud Foundations; AWS-supported Critical Computer Operations Program</li>
+<li>Full Stack Web Development Certification — Dr. Angela Yu (Udemy)</li>
+</ul>
+</div>
+<div class="card rv" style="flex: 1 1 330px; min-width: 0; padding: 30px; background: #FED9B7; border-color: #FED9B7">
+<p class="lbl" style="color: #7A3A1F">Education</p>
+<h2 style="font-size: 24px; font-weight: 800; margin: 0 0 18px">Academic background</h2>
+<div style="display: flex; flex-direction: column; gap: 18px">
+<div><p style="margin: 0; font-weight: 700">B.Tech, Computer Science (AI &amp; ML)</p><p style="margin: 0; color: #3D2A20; font-size: 15px">CMR Engineering College, Hyderabad · 2021 – 2025 · CGPA 8.10</p></div>
+<div><p style="margin: 0; font-weight: 700">Intermediate (MPC)</p><p style="margin: 0; color: #3D2A20; font-size: 15px">FIITJEE, Vijayawada · 2019 – 2021 · 891/1000</p></div>
+<div><p style="margin: 0; font-weight: 700">10th Grade (CBSE)</p><p style="margin: 0; color: #3D2A20; font-size: 15px">Sri Chaitanya International Olympiad School · 2019 · 398/500</p></div>
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="position: relative; overflow: hidden; background: #04516A; color: #FDFCDC">
+<div aria-hidden="true" class="b1" style="position: absolute; width: 360px; height: 360px; border-radius: 50%; background: #00AFB9; opacity: 0.18; top: -120px; left: -100px"></div>
+<div aria-hidden="true" class="b2" style="position: absolute; width: 220px; height: 220px; border-radius: 60px; background: #F07167; opacity: 0.22; bottom: -60px; right: 8%"></div>
+<div style="position: relative; max-width: 1160px; margin: 0 auto; padding: clamp(72px, 10vw, 112px) 20px 36px">
+<div style="display: flex; flex-wrap: wrap; gap: 48px">
+<div class="rv" style="flex: 999 1 440px; min-width: 0">
+<p class="lbl" style="color: #FED9B7">Let's build together</p>
+<h2 style="font-size: clamp(2rem, 4.4vw, 3.2rem); letter-spacing: -0.025em; line-height: 1.1; margin: 0 0 18px; font-weight: 800">Have a product idea or a partnership in mind?</h2>
+<p style="margin: 0 0 30px; color: #D7E6E8; font-size: 17px; max-width: 520px">Tell me what you're building. Whether it's an AI feature, a full SaaS platform or a long-term technical partnership, I'll reply with a clear plan for how we can get it done.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a class="btn btn-coral" href="mailto:vijaykumarchagantipati2002@gmail.com?subject=Project%20enquiry">Email me about your project <span class="arr" aria-hidden="true">→</span></a>
+<a class="btn" href="https://wa.me/919581353239" style="background: #FDFCDC; color: #102A33">Chat on WhatsApp</a>
+</div>
+</div>
+<div class="rv" style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<a class="clink" href="mailto:vijaykumarchagantipati2002@gmail.com"><small>EMAIL</small><span style="font-weight: 600; overflow-wrap: anywhere">vijaykumarchagantipati2002@gmail.com</span></a>
+<a class="clink" href="tel:+919581353239"><small>PHONE</small><span style="font-weight: 600">+91 95813 53239</span></a>
+<a class="clink" href="https://linkedin.com/in/vjaykumarchagantipati2002"><small>LINKEDIN</small><span style="font-weight: 600; overflow-wrap: anywhere">linkedin.com/in/vjaykumarchagantipati2002</span></a>
+<a class="clink" href="https://github.com/VIJAYKUMARCHAGANTIPATI2002"><small>GITHUB</small><span style="font-weight: 600; overflow-wrap: anywhere">github.com/VIJAYKUMARCHAGANTIPATI2002</span></a>
+<div class="clink"><small>LOCATION</small><span style="font-weight: 600">Hyderabad, Telangana, India · Remote worldwide</span></div>
+</div>
+</div>
+<div style="margin-top: 72px; padding-top: 24px; border-top: 1px solid rgba(253,252,220,.2); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 14px; color: #C9DDE1">
+<span>© 2026 Vijay Kumar Chagantipati · CTO &amp; Founder, Logivus IT Solutions</span>
+<a href="#top" style="color: #FED9B7; font-weight: 600">Back to top ↑</a>
+</div>
+</div>
+</section>
+
+</div>
+</body>
+</html>
